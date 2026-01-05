@@ -1,0 +1,67 @@
+/* Page title */
+.page-title {
+  text-align: center;
+  margin: 2rem auto;
+  font-size: 2.5rem;
+}
+
+/* Sections wrapper */
+.sections {
+  margin: 0 2rem; /* horizontal margin for left/right */
+  display: flex;
+  flex-direction: column;
+  gap: 3rem; /* space between sections */
+}
+
+/* Each section spacing */
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem; /* horizontal gap between image and text */
+}
+
+/* Text area spacing */
+.text-box {
+  margin-top: 1rem;
+}
+
+/* Image spacing */
+.image-wrapper {
+  margin-bottom: 2rem; /* space below image */
+  margin-top:2rem;
+}
+
+/* Footer styling */
+.footer {
+  margin-top: 0;
+  padding: 2rem 2rem;
+  background: #111827;
+  color: #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-left{
+  margin-left: 2rem;
+
+
+}
+.footer-right {
+  margin-right: 2rem;
+}
+
+.title-area {
+  background-color: #f3f4f6; /* light gray, adjust as needed */
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.title-area .page-title {
+  font-size: 3rem; /* larger title */
+  margin: 2rem;
+}
+.interactive-mosfet {
+
+  justify-content: center;
+  margin: 5rem;
+}
