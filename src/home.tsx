@@ -1,37 +1,48 @@
 import { motion } from "framer-motion";
 import "./home.css";
-import InteractiveMOSFET from './InteractiveMOSFET';
-
+import InteractiveMOSFET from "./InteractiveMOSFET";
 
 export default function Home() {
   const sections = [
     {
-      title: "What is a CPU?",
-      text: "A Central Processing Unit (CPU) is the primary component of a computer. It is responsible for executing instructions from a program, and is often referred to as the \"brain\" of the computer. A CPU performs arithmetic operations, logical decisions, and controls the flow of data throughout the system. Every action a computer takes ultimately depends on instructions processed by the CPU. Modern CPUs can execute billions of instructions per second, allowing complex software to run smoothly and efficiently.",
+      title: "What Is a CPU?",
+      text: 'A Central Processing Unit (CPU) is the primary component of a computer. It is responsible for executing instructions from a program, and is often referred to as the "brain" of the computer. A CPU performs arithmetic operations, logical decisions, and controls the flow of data throughout the system. Every action a computer takes ultimately depends on instructions processed by the CPU. Modern CPUs can execute billions of instructions per second, allowing complex software to run smoothly and efficiently.',
       image: "/Cpu-image.jpg",
       reverse: true,
     },
     {
-      title: "What is a CPU Made Of?",
+      title: "What Is a CPU Made of?",
       text: "A CPU is comprised of millions to billions of transistors and wires arranged into logic gates, registers, caches and control circuitry. Early computers used vacuum tubes to control electrical signals, but transistors replaced them because they are smaller, faster,  more efficient and more reliable.  There are two major families of transistors: Bipolar Junction Transistors (BJTs) and Field Effect Transistors (FETs). While BJTs were historically important, modern CPUs rely on Metal-Oxide-Semiconductor Field-Effect Transistors (MOSFETs) due to their efficiency, scalability and low power consumption. The picture to the right shows a silicon wafer that is full of CPUs ready to be cut and sold.",
       image: "/Cpu-wafer.jpg",
       reverse: false,
     },
     {
-      title: "What are MOSFETs and How Do They Work?",
+      title: "What Are MOSFETs and How Do They Work?",
       text: "MOSFETs are like a water valve.  Imagine a pipe with water flowing through it: the source is where the water originates, and the drain is where the water is directed. The gate is like the handle on the valve, because when you turn it, water flows from the source to the drain. In a MOSFET, instead of water, it's electrons (or the lack of them) flowing through a semiconductor. To be more specific, when voltage is applied to the gate, it creates an electric field across the insulating/oxide layer. This electric field attracts charge into the channel, forming a conductive path between source and drain. The stronger the gate voltage, the more carriers accumulate, and the lower the resistance of the channel, allowing more current to flow. ",
       image: "/mosfet-circuit.png",
       reverse: true,
     },
     {
       title: "Photolithography",
-      text:"Photolithography is the main manufacturing process used to create the microscopic patterns that form transistors inside modern CPUs. In this process, a silicon wafer is coated with a light sensitive chemical called a photoresist, and a patterned mask is place above it. When light shines above the wafer, the mask blocks the incoming light, and the photoresist undergoes a chemical change, which transfers the pattern onto the silicon below. This patented layer can then be developed, etched, and cleaned. Because advanced CPUs are extremely complex, a single wafer may contain 10 to 100 layers, each requiring photolithography to be repeated with extreme precision. Similarly, as transistor features shrink, light diffraction causes patterns to blue, making the whole process more inaccurate. The Rayleigh equation shows that the smallest printable feature depends on the light's wavelength and the numerical aperture of the optics which is why engineers developed extreme ultraviolet (UV) lithography, which uses much shorter wavelengths.",
+      text: "Photolithography is a manufacturing process used to create the transistors and wires on a silicon wafer. First, a light-sensitive material called photoresist is applied to the wafer’s surface, then a patterned mask is aligned above the wafer. Finally, light is projected through it to selectively expose areas of the photoresist. This exposure defines where material will later be etched away or modified, allowing engineers to build microscopic circuit components layer by layer. Modern CPUs are produced using dozens of these layers (up to 100), requiring the photolithography process to be repeated many times with extreme precision. Because of its ability to reliably reproduce complex designs at nanometer scales, photolithography is a foundational technique in semiconductor fabrication.",
       image: "/photolithography.png",
       reverse: false,
     },
     {
-      title: "Moore's Law and Its Impact",
-      text: "In 1965, an engineer at intel, Gordon Moore, observed that the number of transistors on an integrated circuit tended to double roughly every two years. This trend became known as Moore's Law. This pattern accurately predicted decade of improvements in computing power, cost efficiency, and energy performance. As transistors became smaller, CPUs grew faster and cheaper without requiring major changes in software - it was free progress. Moore's Law functioned as a  guiding trend for the semiconductor industry rather than a true law of physics, but it shaped modern technology more than almost any other principle.",
+      title: "Physics and Engineering of Photolithography",
+      text: "At its core, photolithography is governed by wave optics and quantum interactions between light and matter. When light passes through a photomask, it diffracts due to its wave nature, causing the projected pattern to blur as features approach the wavelength of the light. This limitation is described by the Rayleigh criterion, which shows that the minimum feature size depends on the light’s wavelength and the numerical aperture of the optical system. Shorter wavelengths, such as extreme ultraviolet (EUV), reduce diffraction and allow for smaller transistors. At the atomic level, photons absorbed by the photoresist trigger chemical bond changes, altering its solubility so that precise patterns can be developed and etched into the silicon. In addition, due to the miniature scale, the level of precision required to make sure that the mirrors and photo mask are positioned correctly is astronomical. For a given machine, only around 1 nanometer and a couple of picoradians of tolerance are given for each step. This means that each step must be precise down to a fraction of a nanometer. This is an engineering marvel on its own.",
+      image: "/physics-photolithography.png",
+      reverse: true,
+    },
+    {
+      title: "Extreme Ultraviolet (EUV) Lithography",
+      text: "EUV is an advanced patterning technology developed to continue to shrink transistors as traditional optical methods reached their limits. EUV uses light with an extremely short wavelength of about 13.5 nanometers, generated by firing high-energy lasers at tiny droplets of molten tin to create plasma that emits EUV radiation. Because this light is strongly absorbed by air and glass, EUV systems operate in low-pressure hydrogen gas.  These innovations allow engineers to pattern much smaller features, making EUV a critical technology for producing advanced and modern CPUs.",
+      image: "tin-droplets.jpg",
+      reverse: false,
+    },
+    {
+      title: "Moore's Law",
+      text: "In 1965, an engineer at Intel, Gordon Moore, observed that the number of transistors on an integrated circuit tended to double roughly every two years. This trend became known as Moore's Law. The scaling of Moore's law was possible by advances in semiconductor physics and engineering. As transistors became smaller, shorter channel lengths reduced carrier travel distance, allowing for faster switching, while lower operating voltages reduced energy consumption per operation. For decades, these scaling benefits enabled CPUs to become faster, cheaper, and more energy-efficient without requiring major software changes - it was free progress. Although Moore's law is not a true law of physics, it served as a guiding trend for the semiconductor industry.",
       image: "/Moores-law.png",
       reverse: true,
     },
@@ -42,14 +53,14 @@ export default function Home() {
       reverse: false,
     },
     {
-      title: "What Does This Mean for the Future of Computing?",
-      text: "With the end of Moore's Law, the era of \"free\" performance improvements is over. Future gains in computing power will rely less on smaller transistors and more on creative engineering, including processor architecture, parallelism, specialized hardware, and better software optimization. While new technologies like quantum computing have newer and faster use cases, they are not direct replacements for traditional CPUs and excel only at specific tasks. ",
+      title: "What Does This Mean for The Future of Computing?",
+      text: 'With the end of Moore\'s Law, the era of "free" performance improvements is over. Future gains in computing power will rely less on smaller transistors and more on creative engineering, including processor architecture, parallelism, specialized hardware, and better software optimization. While new technologies like quantum computing have newer and faster use cases, they are not direct replacements for traditional CPUs and excel only at specific tasks. ',
       image: "/Future-computing.jpg",
       reverse: true,
     },
     {
       title: "Related Careers",
-      text: "Modern CPUs are the result of work from a wide range of science and engineering careers, each requiring specialized education and training. Computer engineers and electrical engineers who design processor architectures and transistor layouts typically have university degrees with graduate studies in microelectronics or computer architecture. Semiconductor physicists and material scientists study how electrons behave in transistors and develop new materials for faster and more efficient chips. These careers usually require advanced degrees in physics material science, or nanotechnology. Photonics and lithography engineers work with technologies such as extreme ultraviolet (EUV) photolithography to manufacture CPUs. Such careers require backgrounds in physics, optics, and engineering. An example of some of the work Canadians have done in these fields is the National Research Council of Canada (NRC), in collaboration with McGill university have come up with a solution to use machine learning to lower the amount of imperfections on photolithography machines' optical performance. ",
+      text: "Modern CPUs are the result of work from a wide range of science and engineering careers, each requiring specialized education and training. Computer engineers and electrical engineers who design processor architectures and transistor layouts typically have university degrees with graduate studies in microelectronics or computer architecture. Semiconductor physicists and material scientists study how electrons behave in transistors and develop new materials for faster and more efficient chips. These careers usually require advanced degrees in physics, material science, or nanotechnology. Photonics and lithography engineers work with technologies such as extreme ultraviolet (EUV) photolithography to manufacture CPUs. Such careers require backgrounds in physics, optics, and engineering. An example of some of the work Canadians have done in these fields is the National Research Council of Canada (NRC), in collaboration with McGill university have come up with a solution to use machine learning to lower the amount of imperfections on photolithography machines' optical performance. ",
       image: "/photolith-engineer.jpg",
       reverse: false,
     },
@@ -58,74 +69,63 @@ export default function Home() {
   return (
     <div className="page">
       <div className="title-area">
-        <h1 className="page-title">CPUs & Transistors</h1>
+        <h2 className="header">Samuel Cook</h2>
+        <h1 className="page-title">CPUs</h1>
+        <h2 className="page-subtitle">Exploring How CPUs Are Designed, Built, and Scaled</h2>
       </div>
 
       <div className="sections">
-      {sections.map((section, index) => (
-      <motion.div
-        key={index}
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className={`section ${section.reverse ? "reverse" : ""}`}
-      >
-        {section.image && (
-          <div
-            className={`image-wrapper ${section.reverse ? "order-last" : ""}`}
-            style={{
-              display: "flex",
-              justifyContent: "center", // centers image within its half
-              alignItems: "center",
-            }}
+        {sections.map((section, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className={`section ${section.reverse ? "reverse" : ""}`}
           >
-            <img
-              src={section.image}
-              alt={section.title}
-              className="image-box"
+            {section.image && (
+              <div
+                className={`image-wrapper ${
+                  section.reverse ? "order-last" : ""
+                }`}
+                style={{
+                  display: "flex",
+                  justifyContent: "center", // centers image within its half
+                  alignItems: "center",
+                }}
+              >
+                <img
+                  src={section.image}
+                  alt={section.title}
+                  className={`image-box ${section.title === "Moore's Law" ? "moore" : ""}`}
+                  />
+              </div>
+            )}
+            {section.interactive === "mosfet" && (
+              <div
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "right",
+                }}
+              >
+                <InteractiveMOSFET />
+              </div>
+            )}
+            <div
+              className="text-area"
               style={{
-                width:
-                  section.title === "Moore's Law and Its Impact"
-                    ? "600px" 
-                    : section.title === "What Does This Mean for the Future of Computing?"
-                    ? "600px"
-                    :"100%",
-                maxWidth:
-                  section.title === "Moore's Law and Its Impact"
-                    ? "520px" // limit max width
-                    : section.title === "What Does This Mean for the Future of Computing?"
-                    ? "510px"
-                    : section.title === "What are MOSFETs and How Do They Work?"
-                    ? "500px"
-                    :"460px",
-                height: "auto",
-                objectFit: "cover",
+                textAlign: "left",
               }}
-            />
-          </div>
-        )}
-        {section.interactive === "mosfet" && (
-          <div style ={{ width: "100%", display: "flex", justifyContent: "right"}}>
-            <InteractiveMOSFET />
-          </div>
-        )}
-        <div
-          className="text-area"
-          style={{
-            textAlign: "left",
-          }}
-        >
-          <h2 className="section-title">
-            {section.title}
-          </h2>
-          <div className="text-box">
-            <p>{section.text}</p>
-          </div>
-        </div>
-      </motion.div>
-    ))}
-
+            >
+              <h2 className="section-title">{section.title}</h2>
+              <div className="text-box">
+                <p>{section.text}</p>
+              </div>
+            </div>
+          </motion.div>
+        ))}
       </div>
 
       <footer className="footer">
@@ -135,23 +135,3 @@ export default function Home() {
     </div>
   );
 }
-
-
-
-              // style={{
-              //   width:
-              //     section.title === "Moore's Law and Its Impact"
-              //       ? "600px" 
-              //       : section.title === "What Does This Mean for the Future of Computing?"
-              //       ? "600px"
-              //       :"100%",
-              //   maxWidth:
-              //     section.title === "Moore's Law and Its Impact"
-              //       ? "520px" // limit max width
-              //       : section.title === "What Does This Mean for the Future of Computing?"
-              //       ? "510px"
-              //       : section.title === "What are MOSFETs and How Do They Work?"
-              //       ? "500px"
-              //       :"460px",
-              //   height: "auto",
-              //   objectFit: "cover",
