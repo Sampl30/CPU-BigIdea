@@ -104,6 +104,9 @@ margin: 0 auto;
 .image-box.moore {
 max-width: 520px;
 }
+.image-box.phtolithography {
+max-width: 730px;
+}
 
 /* stack sections on smaller screens */
 @media (max-width: 800px) {
